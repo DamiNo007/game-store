@@ -1,0 +1,116 @@
+<div class = "container">
+    <div class = "dashboard">
+        <div class = "sidebar" style="margin-top: 32px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; border-top-right-radius: 10px; border-top-left-radius: 10px;">
+            <h3>For me</h3>
+            <li style="list-style-type: none; background-color: #f0f0f0;">
+                <a routerLink = '/categories/1'>Recommendations</a>
+            </li>
+            <li style="list-style-type: none; background-color: #f0f0f0;">
+                <a routerLink = '/cart'>My games</a> 
+            </li>
+            <li style="list-style-type: none; background-color: #f0f0f0;">
+                <a routerLink = '/cart'>My Cart</a>
+            </li>
+        </div>
+        <div class = "sidebar" style="margin-top: 20px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; border-top-right-radius: 10px; border-top-left-radius: 10px;">
+            <h3>Categories</h3>
+              <li *ngFor="let category of categories" style="background-color: #f0f0f0; list-style-type: none;">
+                <a routerLink = '/categories/{{category.id}}' style="font-size:13pt;">
+                    {{category.name}}
+                </a>
+              </li>
+              <li *ngFor="let category of categories" style="background-color: #f0f0f0; list-style-type: none;">
+                <a routerLink = '/categories/{{category.id}}' style="font-size:13pt;">
+                    {{category.name}}
+                </a>
+              </li> 
+              <li *ngFor="let category of categories" style="background-color: #f0f0f0; list-style-type: none;">
+                <a routerLink = '/categories/{{category.id}}' style="font-size:13pt;">
+                    {{category.name}}
+                </a>
+              </li>  
+        </div>
+        <div class = "sidebar" style="margin-top: 20px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; border-top-right-radius: 10px; border-top-left-radius: 10px;">
+            <h3>Top Games</h3>
+            <li *ngFor="let game of topGames" style="list-style-type: none; background-color: #f0f0f0">
+                <a routerLink = '/games/{{game.id}}'>
+                    {{game.full_name}}
+                </a>
+            </li>
+            <li *ngFor="let game of topGames" style="list-style-type: none; background-color: #f0f0f0">
+                <a routerLink = '/games/{{game.id}}'>
+                    {{game.full_name}}
+                </a>
+            </li>
+            <li *ngFor="let game of topGames" style="list-style-type: none; background-color: #f0f0f0">
+                <a routerLink = '/games/{{game.id}}'>
+                    {{game.full_name}}
+                </a>
+            </li>
+            
+        </div>
+    </div>
+    <div class="games">
+  
+        <form action="/action_page.php" style="display: flex;">
+            <input type="text" [(ngModel)] = "searchName" placeholder="Enter Title" #searchBox id="search" name="firstname" required>
+            <button (click) = searchGame(searchBox.value) id = "searchBtn">Search</button>
+        </form>
+
+        <div *ngIf = "searchName">
+            {{searchName}}, searching results!
+            <div style="display: flex;flex-flow: row wrap;">
+                <div *ngFor="let game of searchGames$ | async" class = "item">
+                    <a routerLink = '/games/{{game.id}}' style="text-decoration:none; color: white;">
+                        <div>
+                            <img class = "flexibleImg" src = "{{game.img_path}}" width="250px" height="310px" style="border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                        </div>
+                        <div id = "game_name">
+                            {{game.full_name}}
+                        </div>
+                        <div>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span> 
+                        </div>
+                        <div>
+                            <span style="font-size: 15pt;">{{game.release_date}}</span>
+                        </div>            
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+
+        <div *ngIf = "!searchName">
+            <div style="display: flex;flex-flow: row wrap;">
+            
+                <div *ngFor="let game of games" class = "item">
+                    <a routerLink = '/games/:{{game.id}}' style="text-decoration:none; color: white;">
+                        <div>
+                            <img class = "flexibleImg" src = "{{game.img_path}}" width="250px" height="310px" style="border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                        </div>
+                        <div id = "game_name">
+                            {{game.full_name}}
+                        </div>
+                        <div>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span> 
+                        </div>
+                        <div>
+                            <span style="font-size: 15pt;">{{game.release_date}}</span>
+                        </div>            
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+
+        
+    </div>
+</div>

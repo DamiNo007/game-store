@@ -1,0 +1,71 @@
+.container{
+    width: 100%;
+    display: flex;
+    padding-top:10px;
+
+}
+
+.games{
+    width: 80%;
+    padding-left: 10px;
+}
+
+#game_name{
+    font-size: 15pt;
+
+    
+}
+
+
+.item {
+    width: 250px;
+    text-decoration: none;
+    border: 1px solid black;
+    font-size: 25px;
+    text-align: center;
+    margin: 10px;
+    border-radius: 10px;
+    background-color:#1e1e1f;
+    padding-bottom: 10px;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.sidebar{
+    text-align: center; 
+    border: 2px solid #b3b3b3;
+    margin-left: 10px;
+    background-color:#b0afac; 
+}
+
+.dashboard{
+    width: 20%;
+    text-align: center;
+}
+
+#search{
+    border-radius: 10px;
+    font-size: 15pt;
+    height: 30px;
+}
+
+#searchBtn{
+    border-radius: 10px;
+    font-size: 12pt;
+    margin-left: 5px;
+    min-height: 30px;
+}
+
+input[type=text] {
+    width: 130px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  /* When the input field gets focus, change its width to 100% */
+  input[type=text]:focus {
+    width: 100%;
+  }

@@ -1,0 +1,66 @@
+<link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Averia Gruesa Libre' rel='stylesheet'>
+<meta name="viewport" content="width=device-width">
+
+<div class = "container">
+  <span class="label success">Fresh news!</span>
+  <div class="newmain">
+      <div class="newsMain">
+      <h1 class="Acme36">News</h1>
+      <p class="choosing">Home / <span class="newsColor">News</span></p>
+      </div>
+  </div>
+  <div class="mainContainer" *ngFor="let news of newses">
+      <div class="photoContainer">  
+          <img src="{{news.news_photo}}" alt="Avatar" class="image">
+        </div>
+      <div class="insideDiv">
+          <h3 class="Acme20">{{news.date}} / in <a href="#" class="hrefStyle">News</a></h3>
+          <h1 class="Acme20">Rating
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span></h1>
+          <h1 class="Acme36Black">{{news.news_name}}</h1>
+          <p class="Averia16Black">{{news.description}}</p>
+          <a routerLink = '/news/:{{news.id}}'>
+            <button class="button"><span class="Acme36">Read More</span></button>
+          </a>
+      </div>     
+  </div>
+
+  <br>
+    <br>
+    <div class="inside">
+        <form action="action_page.php">
+          <div class="row">
+            <div class="col-25">
+              <label style="color: black">News title</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="fname" name="firstname" placeholder="News title...">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label style="color: black">Photo Path(URL)</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="lname" name="lastname" placeholder="Photo Path...">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+                <label style="color: black">News Text</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="lname" name="lastname" placeholder="News text...">
+              </div>
+          </div>
+          <div class="row">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+      </div>
+</div>

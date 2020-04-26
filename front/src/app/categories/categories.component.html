@@ -1,0 +1,15 @@
+<h1 style="text-align: center; color: black;">Categories</h1>
+<div class = "container">
+    <div class="categories">
+        <div *ngFor="let category of categories" class = "item">
+            <a routerLink = "/categories/:{{category.id}}" style="text-decoration:none; color: white;">
+                <div>
+                    <img src = "{{category.img}}" width="250px" height="320px" style="border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                </div>
+                <div id = "category_name">
+                    {{category.name}}
+                </div>            
+            </a>
+        </div>
+    </div>
+</div>

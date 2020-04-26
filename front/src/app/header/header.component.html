@@ -1,0 +1,21 @@
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+
+<header class="header-section">
+    <div class="header-warp">
+        <div class="header">
+            <!-- site logo -->
+            <a [routerLink] = "['/home']" class="site-logo">
+                <img src="assets/img/logo.png" alt="">
+            </a>
+            <div class="navbar">
+                <a [routerLink] = "['/home']"> Home</a> 
+                <a [routerLink] = "['/games']"> Games</a> 
+                <a [routerLink] = "['/reviews']">Reviews</a> 
+                <a [routerLink] = "['/news']"> News</a>
+                <a [routerLink] = "['/contact']"> Contact</a>
+                <a id = "log" style = "float: right;" [routerLink] = "['/profile']"> <i class="fa fa-fw fa-user"></i>{{currentUser.first_name }} {{currentUser.last_name}}</a>
+                <a id = "log" style = "float: right;" [routerLink] = "['/cart']"> <i class="fa fa-shopping-cart"></i> Cart</a>
+            </div>
+        </div>
+    </div>
+</header>

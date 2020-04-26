@@ -1,0 +1,97 @@
+.footer-container{
+    position: relative;
+    bottom: 0;
+    top:0;
+    min-height: 300px;
+    background-color:#424242;
+    width: 101.05%;
+    margin-left: -8px;
+}
+
+.footer-section .container{
+    width: 80%;
+    display: flex;
+    margin-left: 10%;
+   /* background-color: yellow;*/
+}
+
+
+
+
+.footer-menu{
+    margin-top: 10%;
+    margin-left: 7%;
+    width: 68%;
+    /*background-color: blue;*/
+    padding-right: 2%;
+    padding-left: 2%;
+    
+}
+
+.footer-menu li{
+    display: inline;
+    margin-left: 10%;
+    font-size:12pt;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+    font-family: Arial;
+}
+
+a:hover{
+    color: #b01ba5;
+}
+
+.footer-icons{
+    margin-top: 10%;
+    width:50%;
+    /*background-color: blue;*/
+    margin-left: 22%;
+}
+
+.footer-icons a{
+    margin-left: 15%;
+} 
+
+
+.footer-info{
+    width: 50%;
+    /*background-color: tomato;*/
+}
+
+.footer-logo{
+    margin-left: 33%;
+}
+
+.copyright{
+    width: 40%;
+    margin-left: 32%;
+    margin-top: 10%;
+    font-size: 10pt;
+    font-weight: bold;
+    color:#715582;
+   /* background-color: blue;*/
+}
+.copyright a{
+    font-weight: bold;
+    color:#715582;
+    font-size: 10pt;
+   /* background-color: blue;*/
+}
+
+.footer-left-pic{
+    width: 25%;
+}
+
+.footer-left-pic img{
+    margin-left: 20%;
+
+}
+
+.footer-right-pic{
+    width: 25%;
+    margin-top: -2%;
+}

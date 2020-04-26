@@ -1,0 +1,66 @@
+<link href='https://fonts.googleapis.com/css?family=Acme' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Averia Gruesa Libre' rel='stylesheet'>
+<meta name="viewport" content="width=device-width">
+
+<div class = "container">
+    <span class="label success">Fresh reviews!</span>
+    <div class="revmain">
+        <div class="reviewMain">
+        <h1 class="Acme36">Reviews</h1>
+        <p class="choosing">Home / <span class="reviewColor">Reviews</span></p>
+        </div>
+    </div>
+    <div class="mainContainer" *ngFor="let review of reviews">
+        <div class="photoContainer">
+            <img src="{{review.review_photo}}" alt="Avatar" class="image">
+            
+          </div>
+        <div class="insideDiv">
+            <h3 class="Acme20">{{review.date}} / in <a href="#" class="hrefStyle">Games</a></h3>
+            <h1 class="Acme20">Rating <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span></h1>
+            <h1 class="Acme36Black">{{review.review_name}}</h1>
+            <p class="Averia16Black">{{review.description}}</p>
+            <a routerLink = '/reviews/:{{review.id}}'>
+                <button class="button"><span class="Acme36">Read More</span></button>
+            </a>
+    </div>
+        
+    </div>
+    <br>
+    <br>
+    <div class="inside">
+        <form action="action_page">
+          <div class="row">
+            <div class="col-25">
+              <label style="color: black">Review title</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="fname" name="firstname" placeholder="Review title...">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label style="color: black">Photo Path(URL)</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="lname" name="lastname" placeholder="Photo Path...">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+                <label style="color: black">Review Text</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="lname" name="lastname" placeholder="Review text...">
+              </div>
+          </div>
+          <div class="row">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+      </div>
+</div>

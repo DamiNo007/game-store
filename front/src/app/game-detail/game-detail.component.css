@@ -1,0 +1,121 @@
+.mainImg{
+	
+}
+
+
+
+.contentWrapper{
+	display: flex;
+}
+
+
+.AddToCartBtn {
+	background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+	background-color:#2dabf9;
+	border-radius:10px;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:14px;
+	padding:8px 23px;
+	text-decoration:none;
+    text-shadow:1px 2px 3px #263666;
+}
+.AddToCartBtn:hover {
+	background:linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+	background-color:#0688fa;
+}
+.AddtoCartBtn:active {
+	position:relative;
+	top:1px;
+}
+
+
+.BuyBtn {
+    background-color:#1cd928;
+    margin-left: 8px;
+	border-radius:10px;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:14px;
+	padding:8px 23px;
+	text-decoration:none;
+	text-shadow:1px 2px 3px #263666;
+}
+.BuyBtn:hover {
+	background:linear-gradient(to bottom, #00bf0c 5%, #1cd928 100%);
+	background-color:#0688fa;
+}
+.BuyBtn:active {
+	position:relative;
+	top:1px;
+}
+
+#item2{
+	margin-left:5px;padding-left:20px;padding-top:5px; padding-right:20px; padding-bottom:20px; width: 66%; background-color:#f0f0f0; border-radius: 10px; border: 2px solid #b3b3b3
+}
+
+
+
+.flexibleImg{
+	max-width: 95%;
+	max-height: 100%;
+}
+
+#change{
+    border-radius: 10px;
+    font-size: 15pt;
+    height: 30px;
+}
+
+#changeBtn{
+    border-radius: 10px;
+    font-size: 12pt;
+    margin-left: 5px;
+    min-height: 30px;
+}
+
+input[type=text] {
+    width: 100%;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  /* When the input field gets focus, change its width to 100% */
+
+@media only screen and (max-width:830px) {
+	/* For mobile phones: */
+	.contentWrapper{
+		width: 100%;
+		display: block;
+		align-items: center;
+	
+	}
+
+	#gameTitle{
+		text-align: center;
+	}
+
+	.mainImg{
+		width: 80%;
+	}
+
+	#item1{
+		min-width: 80%;
+		margin-left: 10%;
+	}
+
+	#gameImg{
+		width: 100%;
+	}
+	#item2{
+		width: 80%;
+		margin-left: 5%;
+		padding-bottom: 15%;
+	}
+
+	.buttons{
+		margin-bottom: 10%;
+	}
+  }
